@@ -1,0 +1,559 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+body {
+    min-width: 550px;
+    padding: 0;
+    margin: 0;
+
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 510px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.site-navigation {
+    display: flex;
+    width: 510px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    justify-content: space-between;
+}
+
+.site-header {
+    position: relative;
+    z-index: 2;
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.logo-link:hover,
+.logo-link:focus {
+    opacity: 0.5;
+}
+
+.logo-link:active {
+    opacity: 0.3;
+}
+
+.logo-link img {
+    margin: 10px 0;
+}
+
+.navigation-list {
+    display: flex;
+    margin: 0 -15px 0 0;
+    padding: 0;
+
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.navigation-list a:hover,
+.navigation-list a:focus {
+    opacity: 0.5;
+}
+
+.navigation-list a:active {
+    color: #ff8a00;
+}
+
+.navigation-list a {
+    display: block;
+    padding: 12px 15px 11px;
+
+    color: #845927;
+}
+
+.intro .container {
+    z-index: -1;
+
+    min-height: 150px;
+    margin-bottom: 20px;
+    padding: 15px 0 0;
+
+
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.intro-title {
+    width: 240px;
+    padding: 0;
+    margin: 0;
+
+    font-family: "Georgia", "Times", serif;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
+}
+
+.intro-title b,
+.features-title b,
+.delivery-text b {
+    font-weight: 400;
+
+    color: #ff8a00;
+}
+
+.intro p {
+    width: 210px;
+    margin: 8px 0 10px;
+    padding: 0;
+
+    line-height: 20px;
+}
+
+.quote {
+    display: block;
+    position: relative;
+    padding: 0 0 0 33px;
+    margin: 20px 0 20px;
+
+    font-family: "Georgia", "Times", serif;
+    font-style: italic;
+}
+
+.quote p {
+    padding: 0;
+    margin: 0;
+
+
+    font-size: 16px;
+    line-height: 24px;
+    quotes: none;
+}
+
+.quote::before {
+    position: absolute;
+    content: "«";
+
+    top: 0;
+    left: 0;
+
+    font-size: 36px;
+
+    color: #ff8a00;
+}
+
+.author {
+    display: block;
+    padding: 0;
+    margin: 4px 0;
+}
+
+.popular-products {
+    margin: 0;
+
+    background-color: #fff3e5;
+}
+
+.delivery,
+.custom,
+.contacts,
+.catalog,
+.item {
+    margin: 15px 0 10px;
+}
+
+.delivery-title,
+.custom-title,
+.contacts-title,
+.catalog-title,
+.item-title {
+    padding: 0;
+    margin: 0;
+
+    font-family: "Georgia", "Times", serif;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
+}
+
+.custom-columns {
+    display: flex;
+    flex-grow: 0;
+}
+
+.custom-columns img {
+    display: flex;
+    flex-shrink: 0;
+
+    align-items: center;
+    margin: 20px 20px 30px 0;
+    min-height: 200px;
+}
+
+.custom-columns div {
+    margin: 5px 0 20px;
+}
+
+.products-list {
+    display: flex;
+    padding: 20px 0 0;
+    margin: 0 0 0 -20px;
+
+    flex-wrap: wrap;
+    flex-shrink: 0;
+
+    list-style: none;
+}
+
+.products-list li {
+    display: flex;
+}
+
+.product-card {
+    position: relative;
+
+    display: flex;
+    width: 132px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 124px 12px 12px;
+
+    flex-direction: column;
+
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.product-card-new {
+    position: relative;
+}
+
+.product-card-new::after {
+    position: absolute;
+    content: "new";
+
+    width: 34px;
+    height: 15px;
+    top: 8px;
+    right: -2px;
+
+    font-weight: 700;
+    line-height: 14px;
+    color: #ffffff;
+    text-align: center;
+
+    background-color: #ff8a00;
+    border-radius: 4px 0 0 4px;
+}
+
+.product-card:hover,
+.product-card:focus {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.product-card:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    order: -1;
+}
+
+.product-card h3 {
+    margin: 0 0 2px 0;
+    padding: 0;
+
+    font-family: "Georgia", "Times", serif;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.product-card p {
+    margin: 0 0 8px 0;
+    padding: 0;
+
+    font-family: "Georgia", "Times", serif;
+    font-style: italic;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.price {
+    margin-top: auto;
+
+    font-weight: 700;
+    font-size: 15px;
+    color: #ff8a00;
+}
+
+.price del {
+    margin-right: 2px;
+
+    font-weight: 400;
+    font-size: 13px;
+    color: #000000;
+    text-decoration: line-through;
+}
+
+span.price::after,
+.price del::after {
+    content: "₽";
+}
+
+span.price:empty::after,
+.price del:empty::after {
+    content: "";
+}
+
+.map-link {
+    display: block;
+    margin-top: -20px;
+    margin-bottom: 30px;
+
+    color: #845927;
+}
+
+.contacts img,
+.item img {
+    display: flex;
+    flex-shrink: 0;
+
+    align-items: center;
+    margin: 20px 0 30px;
+    min-height: 200px;
+}
+
+.contacts-info {
+    margin: -10px 0 30px;
+}
+
+.contacts-info p {
+    position: relative;
+    padding-left: 16px;
+    margin: 12px 0;
+}
+
+.contact-phone::before {
+    position: absolute;
+    content: "";
+
+    width: 10px;
+    height: 13px;
+
+    top: 2px;
+    left: 0;
+
+}
+
+.contact-address::before {
+    position: absolute;
+    content: "";
+
+    width: 9px;
+    height: 13px;
+
+    top: 2px;
+    left: 0;
+
+
+}
+
+.delivery-background {
+    display: flex;
+    flex-shrink: 0;
+
+    align-items: center;
+    margin: 20px 0 30px;
+    min-height: 200px;
+
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.delivery-text {
+    width: 210px;
+    margin-left: auto;
+    padding: 16px 20px 20px;
+
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-text p {
+    margin: 8px;
+    padding: 0;
+}
+
+.features {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.features-title,
+.products-title {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Georgia", "Times", serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.features-list {
+    display: flex;
+
+    padding: 0;
+    margin: 14px 0 0;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    list-style: none;
+}
+
+.features-list li {
+    position: relative;
+
+    width: 142px;
+    margin-bottom: 10px;
+}
+
+.features-list li::before {
+    position: absolute;
+    content: "";
+
+    top: 2px;
+    left: 0;
+}
+
+.feature-unique {
+    padding-left: 22px;
+}
+
+.feature-unique::before {
+    width: 16px;
+    height: 12px;
+
+
+}
+
+.feature-organic {
+    padding-left: 25px;
+}
+
+.feature-organic::before {
+    width: 19px;
+    height: 12px;
+
+
+}
+
+.feature-protected {
+    padding-left: 16px;
+}
+
+.feature-protected::before {
+    width: 10px;
+    height: 12px;
+
+
+}
+
+.site-footer {
+    background-color: #847462;
+}
+
+.site-footer .container {
+    display: flex;
+
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.site-footer .navigation-list {
+    margin-right: 15px;
+    margin-left: -15px;
+
+    justify-content: left;
+}
+
+.site-footer a {
+    display: block;
+    margin: 0;
+    padding: 14px 15px;
+
+    color: #ffffff;
+}
+
+.social-list {
+    display: flex;
+    width: 110px;
+    padding: 0;
+    margin: 0 -10px 2px;
+
+    justify-content: end;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    list-style: none;
+}
+
+.social-list a {
+    display: block;
+    width: 14px;
+    height: 14px;
+    padding: 10px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.social-list a:hover,
+.social-list a:focus {
+    opacity: 0.5;
+}
+
+.social-list a:active {
+    opacity: 0.3;
+}
+
+.course{
+    display: flex;
+    width: 100%;
+}
+.day_course{
+    text-align: center;
+    min-height: 200px;
+}
