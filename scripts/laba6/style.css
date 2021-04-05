@@ -557,3 +557,9 @@ span.price:empty::after,
     text-align: center;
     min-height: 200px;
 }
+
+.course_block{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+}

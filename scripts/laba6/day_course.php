@@ -1,13 +1,17 @@
 <?php
 
 
-$currDate= date("d.M.Y");
-echo getCourseBlock($currDate);
+$currDate= date("Y-n-j");
 
-function getCourseBlock($date){
+$arr = getCourseArr($currDate);
+
+//echo getCourseBlock($currDate);
+
+function getCourseBlock($date,$course){
 
    $block='<div class="day_course">';
    $block.="<h1>$date</h1>";
+   require("test.php");
 
    $block.="</div>";
    return $block;
@@ -15,18 +19,19 @@ function getCourseBlock($date){
 
 function getCourseArr($date){
 
-    $ch = curl_init("https://belarusbank.by/api/kursExchange");
-    $fp = fopen("example_homepage.txt", "w");
+    $url="https://www.nbrb.by/api/exrates/rates?ondate=".$date."&periodicity=0";
+    $curl = curl_init($url);
 
-    curl_setopt($ch, CURLOPT_FILE, $fp);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
 
-    curl_exec($ch);
-    if(curl_error($ch)) {
-        fwrite($fp, curl_error($ch));
+
+    $out=curl_exec($curl);
+    if(curl_error($curl)) {
+        return null;
     }
-    curl_close($ch);
-    fclose($fp);
 
+    curl_close($curl);
+    $out=json_decode($out);
+    return $out;
 
 }
