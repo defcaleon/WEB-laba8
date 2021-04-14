@@ -552,10 +552,15 @@ span.price:empty::after,
 .course{
     display: flex;
     width: 100%;
+    justify-content: center;
 }
 .day_course{
     text-align: center;
     min-height: 200px;
+    padding-left: 30px;
+    padding-right: 30px ;
+    border: 1px solid #4CAF50;
+
 }
 
 .course_block{
