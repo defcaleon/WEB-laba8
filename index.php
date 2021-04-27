@@ -1,6 +1,10 @@
+<?php
+require("scripts/laba7/dateCookies.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -8,6 +12,7 @@
 	<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 	<script src="scripts/ajax.js"></script>
 	<title></title>
+
 </head>
 <body>
 
@@ -131,7 +136,7 @@
 	<div class="email__text">Stay on the saddle!</div>
 	<div class="email__block">
 		<input type="e-mail" placeholder="enter e-mail" class="email_mail" required >
-		<form method="POST"  action="scripts/laba6/laba6_main.php">
+		<form method="POST"  action="scripts/laba8/laba8.php">
 			<button class="btn_email" >GO</button>
 		</form>
 		
